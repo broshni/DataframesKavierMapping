@@ -1,0 +1,5 @@
+2016-11-15 11:01:49.924 [main] WARN  org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-11-15 11:02:02.204 [main] WARN  org.apache.hadoop.hive.metastore.ObjectStore - Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+2016-11-15 11:02:02.367 [main] WARN  org.apache.hadoop.hive.metastore.ObjectStore - Failed to get database default, returning NoSuchObjectException
+2016-11-15 11:02:02.923 [main] WARN   - Your hostname, andreaslicspro2.dynamic.ucsd.edu resolves to a loopback/non-reachable address: 137.110.134.186, but we couldn't find any external IP address!
+2016-11-15 11:02:11.195 [Executor task launch worker-7] WARN  org.apache.parquet.hadoop.ParquetRecordReader - Can not initialize counter due to context is not a instance of TaskInputOutputContext, but is org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl

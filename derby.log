@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Nov 15 11:15:58 PST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0158-696a-d1f9-000000701670 
+on database directory /Users/roshni/GIT/DataframesKavierMapping/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@219409bd 
+Loaded from file:/Users/roshni/.m2/repository/org/apache/derby/derby/10.10.2.0/derby-10.10.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_15-b03
+user.dir=/Users/roshni/GIT/DataframesKavierMapping
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.9.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

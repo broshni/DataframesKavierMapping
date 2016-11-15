@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN" monitorInterval="30" shutdownHook="disable">
+    <appenders>
+        <Console name="ConsoleStdErr" target="SYSTEM_ERR">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!-- This logs to a file with fixed name and backs-up after every startup to another file with a date appended to its name -->
+        <RollingFile name="FixNameFileAppender" fileName="datamining.log" append="true" filePattern="datamining.log.%d{yyyy-MM-dd}.%i">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy max="20"/> <!-- keeps up to 20 files -->
+        </RollingFile>
+
+    </appenders>
+    <loggers>
+        <root level="warn">
+            <appender-ref ref="ConsoleStdErr"/>
+            <appender-ref ref="FixNameFileAppender"/>
+        </root>
+
+        <!-- Setting special levels for some packages -->
+
+        <!-- Note: additivity="false" avoids duplicate logs coming from root above and the specific package config below -->
+
+        <!-- Spark -->
+        <Logger name="org.apache.spark" level="warn" additivity="false">
+            <appender-ref ref="ConsoleStdErr"/>
+            <appender-ref ref="FixNameFileAppender"/>
+        </Logger>
+
+
+        <!-- Hibernate -->
+        <Logger name="org.hibernate" level="warn" additivity="false">
+            <appender-ref ref="ConsoleStdErr"/>
+            <appender-ref ref="FixNameFileAppender"/>
+        </Logger>
+
+
+
+        <!-- Changing the log level to DEBUG will result in Hibernate-generated SQL to be logged -->
+
+        <Logger name="org.hibernate.SQL" level="warn" additivity="false">
+            <appender-ref ref="ConsoleStdErr"/>
+            <appender-ref ref="FixNameFileAppender"/>
+        </Logger>
+
+
+        <!-- Changing the log level to DEBUG will result in the PreparedStatement bound variable values to be logged. -->
+
+        <Logger name="org.hibernate.type" level="warn" additivity="false">
+            <appender-ref ref="ConsoleStdErr"/>
+            <appender-ref ref="FixNameFileAppender"/>
+        </Logger>
+
+
+        <Logger name="org.rcsb" level="info" additivity="false">
+            <appender-ref ref="ConsoleStdErr"/>
+            <appender-ref ref="FixNameFileAppender"/>
+        </Logger>
+
+    </loggers>
+</configuration>

@@ -1,0 +1,4 @@
+2016-11-15 11:03:17.840 [main] WARN  org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-11-15 11:03:29.938 [main] WARN  org.apache.hadoop.hive.metastore.ObjectStore - Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+2016-11-15 11:03:30.107 [main] WARN  org.apache.hadoop.hive.metastore.ObjectStore - Failed to get database default, returning NoSuchObjectException
+2016-11-15 11:03:30.662 [main] WARN   - Your hostname, andreaslicspro2.dynamic.ucsd.edu resolves to a loopback/non-reachable address: 137.110.134.186, but we couldn't find any external IP address!
